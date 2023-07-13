@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            background: lightcoral;
+            width: 300px;
+            height: 300px;
+            /* display: block; */
+        }
+
+        em {
+            background: orange;
+            /* display: block; */
+            width: 200px;
+            height: 200px;
+        }
+
+        a {
+            background: dodgerblue;
+        }
+
+        .pp {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <span>인라인1</span>
+    <em>인라인2</em>
+    <a href="#">인라인3</a>
+    <span>
+        <!-- <div>인라인에 블럭 못넣음</div>  X -->
+        <a href="#"></a>
+    </span>
+
+    <div>
+        <p>블럭요소에는 블럭과</p>
+        <span>인라인이 둘 다 들어감</span>
+    </div>
+
+    <p class="pp">비비비비빅</p>
+</body>
+
+</html>
