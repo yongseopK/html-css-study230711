@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('../../common.css');
+
+body {
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+
+/* header style */
+header {
+    /* background: orange; */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .inner-header {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+header .inner-header .logo {
+    /* border: 2px solid aqua; */
+    flex: 1;
+}
+
+header .inner-header .logo img {
+    height: 60px;
+}
+
+header .inner-header .intro-text {
+    /* border: 2px solid violet; */
+    flex: 4;
+    font-weight: 700;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+
+header .inner-header .menu-open {
+    /* border: 2px solid greenyellow; */
+    flex: 1;
+    font-weight: 700;
+    font-size: 1.2em;
+    display: block;
+    align-self: stretch;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .inner-header .menu-open .lnr-menu {
+    font-size: 33px;
+    margin-left: 15px;
+}
+
+header .gnb {
+    background: #000;
+    color: #666;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 70px 100px;
+    height: 100vh;
+
+    position: fixed;
+    right: -100%;
+    top: 0;
+    
+    display: flex;
+    flex-direction: row-reverse;
+
+    transition: 0.8s;
+}
+
+header .gnb.open {
+    right: 0;
+}
+
+header .gnb .close {
+    color: #fff;
+    margin-left: 150px;
+}
+
+header .gnb ul {
+    line-height: 1.7;
+}
+
+header .gnb ul li:hover,
+header .gnb ul li.active {
+    color: #fff;
+}
+
+/* section visual style */
+
+section.visual .slide li {
+    background: violet;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+section.visual .slide li img {
+    width: 100%;
+    position: absolute;
+    top: -70px;
+}
+
+section.visual .slide li .txt {
+    /* position으로 화면 정중장에 놓는 공식 */
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-20%, -50%);
+    font-size: 18px;
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+section.visual .slide li .txt h3 {
+    margin: 30px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+section.visual .slide li .scroll {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ccc;
+    transform: rotate(-90deg);
+}
+
+/* section content style */
+section.contents {
+    background: #1b1b1b;
+    padding: 120px 0;
+
+}
+
+/* main-text */
+section.contents .main-text {
+    /* background: orange; */
+    width: 80%;
+    margin: 0 auto;
+    font-size: 25px;
+
+    display: flex;
+    position: relative;
+}
+
+section.contents .main-text::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ffec03;
+
+    position: absolute;
+    left: 70px;
+    top: 100px;
+}
+
+section.contents .main-text::after {
+    content: '”';
+    font-size: 300px;
+
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+
+section.contents .main-text h3 {
+    /* background: red; */
+    flex: 1;
+    font-weight: 700;
+}
+
+section.contents .main-text p {
+    /* background: blue; */
+    flex: 2;
+    font-size: 23px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+section.contents .main-text p span {
+    display: block;
+    color: #999;
+    margin-top: 30px;
+}
+
+/* project */
+section.contents .project .top {
+    /* background: orange; */
+    width: 80%;
+    margin: 200px auto 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.contents .project .top h3 {
+    /* background: red; */
+    font-size: 35px;
+    font-weight: 700;
+}
+
+section.contents .project .top a {
+    /* background: blue; */
+    font-size: 18px;
+}
+
+section.contents .project ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.contents .project ul li {
+    width: 24%;
+    border: 4px solid #fff;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+}
+
+section.contents .project ul li a::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgba(27, 27, 27, 0.8);
+    position: absolute;
+    transition: 0.8s;
+}
+
+section.contents .project ul li a:hover::before {
+    width: 100%;
+}
+
+section.contents .project ul li img {
+    width: 100%;
+}
+
+section.contents .project ul li .name {
+    background: #1b1b1b;
+    font-size: 22px;
+    text-align: right;
+    width: 250px;
+    padding: 15px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    opacity: 0;
+}
+
+section.contents .project ul li a:hover .name {
+    animation: show-name 1s both;
+}
+
+@keyframes show-name {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* > partner style */
+section.contents .partner {
+    /* background: orange; */
+    width: 80%;
+    margin: 170px auto 100px;
+  }
+  section.contents .partner h3 {
+    font-size: 20px;
+    margin-bottom: 80px;
+  }
+  section.contents .partner ul {
+    /* background: tomato; */
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.contents .partner ul li {
+    /* border: 4px solid #fff; */
+    width: 25%;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    opacity: 0.4;
+    transition: 300ms;
+  }
+  section.contents .partner ul li:hover {
+    opacity: 1;
+  }
+
+  /* contact style */
+  section.contents .contact {
+    background: url(../img/contact.jpg) no-repeat center / cover fixed;
+    width: 90%;
+    padding: 220px 0;
+  }
+  section.contents .contact .inner {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.4;
+}
+section.contents .contact .inner .tel {
+    font-size: 55px;
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+/* footer */
+footer {
+    background: #1b1b1b;
+    color: #999;
+    padding: 0 80px 80px;
+}
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer ul li:nth-child(2) {
+    color: #eee;
+    font-size: 16px;
+    line-height: 2;
+}
+footer ul li:nth-child(2) span {
+    font-weight: 700;
+    margin-right: 10px;
+    color: #999;
+}
+
+footer .go-top {
+    color: #fff;
+    font-size: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 60px;
+}
