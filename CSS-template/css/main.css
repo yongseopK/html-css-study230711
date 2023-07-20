@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('../../common.css');
+
+body {
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+
+/* header style */
+header {
+    background: orange;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .inner-header {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+header .inner-header .logo {
+    /* border: 2px solid aqua; */
+    flex: 1;
+}
+
+header .inner-header .logo img {
+    height: 60px;
+}
+
+header .inner-header .intro-text {
+    /* border: 2px solid violet; */
+    flex: 4;
+    font-weight: 700;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+
+header .inner-header .menu-open {
+    /* border: 2px solid greenyellow; */
+    flex: 1;
+    font-weight: 700;
+    font-size: 1.2em;
+    display: block;
+    align-self: stretch;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .inner-header .menu-open .lnr-menu {
+    font-size: 33px;
+    margin-left: 15px;
+}
+
+header .gnb {
+    display: none;
+}
