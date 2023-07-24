@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fruits li {
+            list-style: none;
+        }
+
+        #fruits li:first-child {
+            color: red;
+        }
+
+        /* #fruits .strawberry {
+            color: red;
+        } */
+        #fruits li:last-child {
+            color: greenyellow;
+        }
+
+        #fruits li:nth-child(3) {
+            color: orange;
+        }
+
+        /* n에 0부터 순차적으로 대입한 결과의 순번태그가 선택됨 */
+        #fruits li:nth-child(even) {
+            background: aqua;
+        }
+
+        #fruits li:nth-child(odd) {
+            background: tomato;
+        }
+
+        #fruits li:not(.orange) {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="fruits">
+        <li class="strawberry">딸기</li>
+        <li>사과</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>바나나</li>
+        <li>자몽</li>
+        <li>라임</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        header {
+            border-bottom: 3px solid gray;
+            display: flex;
+            justify-content: space-between;
+            /* 
+            position absolute, fixed를 걸멸
+            기본 가로너비 100%가 풀린다.
+            */
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        header h1 {
+            margin: 20px 20px 30px;
+            font-size: 40px;
+            padding: 0;
+        }
+
+        header ul {
+            margin-top: 30px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        header ul li {
+            margin-right: 30px;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        /*
+        fixed는 언제나 움직임의 기준이
+        브라우저 전체 뷰포트
+         */
+        .go-top {
+            font-size: 30px;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .go-top a {
+            text-decoration: none;
+            color: black;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Home</h1>
+        <nav>
+            <ul>
+                <li>소개</li>
+                <li>커뮤니티</li>
+                <li>자료실</li>
+                <li>회원가입</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="go-top">
+        <a href="#">⬆</a>
+    </div>
+</body>
+
+</html>

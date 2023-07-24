@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자식 선택자
+        맨 뒤에 선택자는 타겟
+        앞에는 조건이다.
+        */
+        div>.orange {
+            background: orange;
+        }
+
+        body>div>ul>li {
+            color: red;
+        }
+
+        #circle>h1.title>.left.low>#banana {}
+    </style>
+</head>
+
+<body>
+    <h1 class="yellow low primary" id="change">안녕하세요</h1>
+    <div>
+        <ul>
+            <li id="apple" class="center reverse">사과</li>
+            <li>포도</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+</body>
+
+</html>
