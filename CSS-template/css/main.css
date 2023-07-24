@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('../../common.css');
+@import url('main-tablet.css');
 
 body {
     font-size: 15px;
